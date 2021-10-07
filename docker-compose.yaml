@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  # docker-compose run --rm npm COMMAND
+  npm:
+    image: node:16.0.0
+    user: node
+    working_dir: /home/node
+    entrypoint: npm
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/home/node
